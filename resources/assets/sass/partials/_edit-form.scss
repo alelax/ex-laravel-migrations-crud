@@ -1,0 +1,13 @@
+div.edit-form-cnt {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: crimson;
+    color: black;
+}
+
+.hide {
+    display: none;
+}

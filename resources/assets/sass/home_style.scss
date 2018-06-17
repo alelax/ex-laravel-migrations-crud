@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+}
+
+div.info-books-cnt {
+
+    div.copertina-cnt {
+        height: auto;
+        padding: 0;
+        position: relative;
+
+        img {
+            width: auto;
+            max-height: 400px;
+        }
+
+        div.info-cnt {
+            position: absolute;
+            bottom: 0;
+            padding: 10px;;
+            margin-bottom: 10px; 
+           
+            background-color: #000000bd;
+            h3, p {
+                margin: 10px 0;
+                color: #FFF;
+            }
+
+            span.info-type {
+                font-size: 12px;
+            }
+
+            div.btns-container {
+                padding: 0;
+
+                button {
+                    padding: 5px 10px;
+                    
+                }
+            }
+        }
+
+    }
+    
+}
