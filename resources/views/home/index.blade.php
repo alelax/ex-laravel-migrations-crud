@@ -2,6 +2,13 @@
 
 @section('page_content')
 
+    {{-- Flash data  --}}
+    @if(Session::has('status'))
+        <div class="flash-msg col-8 mx-auto d-flex justify-content-between"> 
+            {{ Session::get('status') }}  
+            <span class="close-flash"> X </span> 
+        </div>
+    @endif
     
     <div class="container px-0">
         <div class="row no-gutters d-flex">
@@ -61,6 +68,10 @@
 
         $('.close-edit-form').click(function() {
             $(this).parent().addClass('hide');            
+        });
+
+        $('.close-flash').click(function() {           
+           $(this).parent().removeClass('d-flex').addClass('d-none'); 
         });
         
     </script>

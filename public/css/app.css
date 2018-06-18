@@ -4356,6 +4356,31 @@ body {
   margin: 0;
 }
 
+div.flash-msg {
+  border: 2px solid #32cd32;
+  background-color: #32cd32b0;
+  height: 50px;
+  line-height: 50px;
+  color: #008000;
+  border-radius: 10px;
+}
+
+div.flash-msg span.close-flash {
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #008000;
+  border: 2px solid #008000;
+  border-radius: 50%;
+}
+
 div.info-books-cnt div.copertina-cnt {
   height: auto;
   padding: 0;

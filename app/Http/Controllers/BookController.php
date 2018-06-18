@@ -11,13 +11,13 @@ class BookController extends Controller
     public function showBooks()
     {
         $my_books = Book::all();
-        return view('home.index', ['books_list'=>$my_books]);
+        return view('home.index', ['books_list'=>$my_books, 'is_home'=>true]);
     }
 
     public function showDetails(Request $request)
     {
         $book = Book::find($request->id_book);
-        return view('details_page.index', ['book_details'=>$book]);
+        return view('details_page.index', ['book_details'=>$book, 'is_home'=>false]);
     }
 
     public function add(Request $request)
@@ -31,6 +31,8 @@ class BookController extends Controller
         $new_book->trama = $request->trama;
         $new_book->copertina = $request->image;
         $new_book->save();
+        
+        $request->session()->flash('status', 'Elemento aggiunto correttamente');
 
         return redirect()->route('homepage'); 
     }

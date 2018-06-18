@@ -14,7 +14,9 @@
 
     <body>
         
-        @include('partials/_header')
+        @if( $is_home !== false)
+            @include('partials/_header')
+        @endif
         
         @yield('page_content')
 
